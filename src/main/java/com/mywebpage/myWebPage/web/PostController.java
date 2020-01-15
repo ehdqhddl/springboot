@@ -1,5 +1,4 @@
-package com.mywebpage.myWebPage.post;
-
+package com.mywebpage.myWebPage.web;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -10,5 +9,4 @@ public class PostController {
     public String hello(){
         return "HelloWorld";
     }
-
 }
