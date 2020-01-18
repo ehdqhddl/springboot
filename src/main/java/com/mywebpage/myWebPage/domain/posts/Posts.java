@@ -1,19 +1,17 @@
 package com.mywebpage.myWebPage.domain.posts;
 
 
-import com.sun.tools.classfile.ConstantPool;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import sun.security.util.Length;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Getter
 @Entity
 public class Posts {
@@ -27,13 +25,13 @@ public class Posts {
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
-
     private String author;
 
     @Builder
-    public Posts(String title, String content, String author){
+    public Posts(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
     }
+
 }
